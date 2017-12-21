@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>div标签</title>
+<style type="text/css">
+table tr td,th{
+    border:1px solid #000;
+}
+.food>li{border:1px solid red;}/*添加边框样式（粗细为1px， 颜色为红色的实线）*/
+#first>span{border:1px solid red;}
+/*子选择器，即大于符号(>),用于选择指定标签元素的第一代子元素*/
+/*分组选择符
+当你想为html中多个标签元素设置同一个样式时，可以使用分组选择符（，），如下代码为右侧代码编辑器中的h1、span标签同时设置字体颜色为红色：
+*/
+h1,span{color:red;}
+/*包含选择器，即加入空格,用于选择指定标签元素下的后辈元素;总结：>作用于元素的第一代后代，空格作用于元素的所有后代*/
+.first  span{color:red;}
+.stress{
+    color:red;
+}/*类选择器  .类选器名称{css样式代码;}*/
+#setGreen{
+   color:green;
+}/*id选择器：ID选择符的前面是井号（#）号，而不是英文圆点（.）ID选择器只能在文档中使用一次;；类选择器可以使用多次*/
+body{
+font-family:"宋体";font-size:12px;color:red}
+p span{font-weight:bold;}/*粗体*/
+p a{font-style:italic;}/*斜体*/
+p a{text-decoration:underline;}/*设置下划线*/
+p{line-height:1.5em;}/*设置段落行间距1.5倍*/
+h1{
+    letter-spacing:50px;
+}/*中文，字母间隔设置*/
+h1{
+    text-align:center;
+}/*段落对齐，文本居中显示，left,right*/
+</style>
+</head>
+<body>
+<p>三年级时，我还是一个<span id="setGreen">胆小如鼠</span>的小女孩，<span class="stress">胆小如鼠</span>上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个勇气来回答老师提出的问题。学校举办的活动我也没勇气参加。</p>
+<div id="hotList">
+   <h2>热门课程排行榜</h2>
+    <ol>
+       <li>前端开发面试心法 </li>
+      <li>零基础学习html</li>
+       <li>javascript全攻略</li>
+    </ol>
+</div>
+<div id="learningInstructed">
+    <h2>web前端开发导学课程</h2>
+    <ul>
+       <li>网页专业名词大扫盲 </li>
+       <li>网站职位定位指南</li>
+       <li>为您解密Yahoo网站制作流程</li>
+    </ul>
+</div>
+<form action="save.php" method="post" >
+    <label>个人简介：</label>
+    <textarea>支持多行文本内容的输入</textarea>
+    <label>性别:</label>
+    <label>男</label>
+    <!-- type=radio控件为单选框，type=checkbox控件为复选框 ,注意:同一组的单选按钮，name 取值一定要一致-->
+    <input type="radio" value="1"  name="gender-man" />
+    <label>女</label>
+    <input type="radio" value="2"  name="gender-man" />
+    <!-- select-option:下拉列表框。value提交值，selected="selected"属性表示默认选中 -->
+    <select>
+      <option value="看书">看书</option>
+      <option value="旅游">旅游</option>
+      <option value="运动">运动</option>
+      <option value="购物" selected="selected">购物</option>
+    </select>
+    <!-- <label for="控件id名称">标签的 for 属性中的值应当与相关控件的 id 属性值一定要相同。 -->
+</form> 
+<table>
+  <caption>为表格添加标题和摘要</caption>
+  <tr>
+    <th>产品名称 </th>
+    <th>品牌 </th>
+    <th>库存量（个） </th>
+    <th>入库时间 </th>
+  </tr>
+  <tr>
+    <td>耳机 </td>
+    <td>联想 </td>
+    <td>500</td>
+    <td>2013-1-2</td>
+  </tr>
+  <tr>
+    <td>U盘 </td>
+    <td>金士顿 </td>
+    <td>120</td>
+    <td>2013-8-10</td>
+  </tr>
+  <tr>
+    <td>U盘 </td>
+    <td>爱国者 </td>
+    <td>133</td>
+    <td>2013-3-25</td>
+  </tr>
+</table>
+<a  href="http://www.imooc.com"  title="点击进入慕课网">click here!</a>
+<!--  使用mailto能让访问者便捷向网站管理者发送电子邮件<a href="mailto:1093831001@qq.com?subject=hello CC&body=how are you?"> -->
+</body>
+</html>

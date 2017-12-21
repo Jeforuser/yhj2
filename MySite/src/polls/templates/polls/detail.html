@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>{{ question.question_text }}</h1>
+	{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	<form action="{% url 'polls:vote' question.id %}" method="post">
+		<!-- 所有针对内部URL的POST表单都应该使用{% csrf_token %}模板标签 ,防止跨站点请求-->
+		{% csrf_token %}
+		<!-- forloop.counter指示for标签已经循环多少次 -->
+		{% for choice in question.choice_set.all %}
+		    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+		    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+		{% endfor %}
+		<input type="submit" value="Vote" />
+	</form>
+</body>
+</html>

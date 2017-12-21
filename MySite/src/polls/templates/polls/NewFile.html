@@ -1,0 +1,37 @@
+<html><head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>select选择-按钮跳转</title>
+	{% load static %}
+<style type="text/css">
+h3{text-align:center; font-size:30px;color:white;}
+.figure{background-size:100% 100px;background:url({%static 'polls/images/1.jpg' %}) ;}
+.figure2{background-size:50px 100px;background:url({%static 'polls/images/3.jpg' %}) ;}
+.div-inline{ float: left;
+    display: inline;}
+</style>
+<!--  Javascript代码：
+        function gotopageX(){
+              window.location.href="exchange.html"; 
+	
+     } -->
+</head> 
+<body> 
+	<div class="figure" style="height:70px;">
+   		<h3 >大数据分析平台</h3>
+	</div>
+	<div class="figure2 div-inline" style="height:100%;width:150px;">
+		<ul style="margin-top:0px;padding:40px;">
+			<li id="tag1" style="height:36px;width:100px;"><a href="{% url 'polls:NewFile' %}" ><span style="color:white;font-size:20px;">首页</span></a></li>
+			<li id="tag2" style="height:36px;width:100px;"><a href="https://www.imooc.com/"><span style="color:white;font-size:20px;">数据处理</span></a></li>
+			<li id="tag3" style="height:36px;width:100px;"><a href="https://www.imooc.com/"><span style="color:white;font-size:20px;">特征工程</span></a></li>
+			<li id="tag4" style="height:36px;width:100px;"><a href="https://www.imooc.com/"><span style="color:white;font-size:20px;">模型融合</span></a></li>
+			<li id="tag5" style="height:36px;width:100px;"><a href="https://www.imooc.com/"><span style="color:white;font-size:20px;">模块预测</span></a></li>
+			<li id="tag6" style="height:36px;width:100px;"><a href="https://www.imooc.com/"><span style="color:white;font-size:20px;">退出系统</span></a></li>
+		</ul>
+	</div>
+	<div class="div-inline" style="position:absolute;">
+		<img style="position:relative;width:1736px;height:910px;" src={%static 'polls/images/4.jpg' %}/>
+		<a href="https://www.baidu.com/"><img src={%static 'polls/images/6.jpg' %}></a>
+	</div>
+</body> 
+</html> 
